@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/mydb';
 
-app.use(cors({ origin: 'http://localhost:5173' }));
+app.use(cors({ origin: ['http://localhost:5173', 'https://vibe-todo-frontend-seven.vercel.app'] }));
 app.use(express.json());
 app.use('/todos', todoRouter);
 
